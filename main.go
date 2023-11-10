@@ -52,8 +52,6 @@ func getBirthdays() (map[int]int, map[string][]string) {
 		"December":  {},
 	}
 
-	// fmt.Println(monthWithBirthdays)
-
 	for _, val := range birthdays {
 
 		month := strings.Split(val, "/")
@@ -71,7 +69,6 @@ func getBirthdays() (map[int]int, map[string][]string) {
 
 		monthStr := time.Month(monthInt)
 
-		// fmt.Println(monthWithBirthdays[monthStr.String()])
 		if slice, ok := monthWithBirthdays[monthStr.String()]; ok {
 			monthWithBirthdays[monthStr.String()] = append(slice, val)
 		}
